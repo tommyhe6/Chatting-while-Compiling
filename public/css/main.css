@@ -1,0 +1,50 @@
+body {
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #3a3a3a;
+    overflow: hidden;
+}
+
+#main-wrapper {
+    width: 50%;
+    height: 70%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 2px black;
+}
+
+#link-wrapper {
+    width: 100%;
+    align-self: flex-start;
+    display: grid;
+    justify-items: center;
+}
+
+#output-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height: 1em;
+    border: solid gray 1px;
+    text-align: center;
+}
+
+#link {
+    flex: 1;
+}
+
+#clipboard {
+    /* flex: 1; */
+    width: 1em;
+    height: 1em;
+    /* vertical-align: text-top; */
+}
+
+#clipboard-button {
+    cursor: pointer;
+}

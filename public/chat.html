@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chat</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/theme/dracula.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/chat.css">
+        <link rel="stylesheet" type="text/css" href="css/code.css">
+    </head>
+
+    <body>
+        <ul id="messages"></ul>
+        <form id="send-message" action="">
+            <input id="message" placeholder="Enter message"/>
+            <button id="send">Send</button>
+        </form>
+
+        <div id="code-wrapper">
+            <div class="editor-wrapper">
+                <div class="util-wrapper">
+                    <select id="language-private" class="language">
+                        <option value="C">C</option>
+                        <option value="C++">C++</option>
+                        <option value="haskell">haskell</option>
+                        <option value="java">java</option>
+                        <option value="javascript">javascript</option>
+                        <option value="python">python</option>
+                        <option value="shell">shell</option>
+                    </select>
+                    <div class="description">Private only to you</div>
+                    <button id="run-private"  class="run"type="button">Run</button>
+                </div>
+                <div id="editor-private" class="editor"></div>
+            </div>
+            <div class="editor-wrapper">
+                <div class="util-wrapper">
+                    <select id="language-shared" class="language">
+                        <option value="C">C</option>
+                        <option value="C++">C++</option>
+                        <option value="haskell">haskell</option>
+                        <option value="java">java</option>
+                        <option value="javascript">javascript</option>
+                        <option value="python">python</option>
+                        <option value="shell">shell</option>
+                    </select>
+                    <div class="description">Shared between everyone in room</div>
+                    <button id="run-shared" class="run" type="button">Run</button>
+                </div>
+                <div id="editor-shared" class="editor"></div>
+            </div>
+            <div id="info-private" class="info"> 
+                <div class="arrow-wrapper">
+                    <div class="arrow"></div>
+                </div>
+                <div id="compiling-private" class="compiling">Compiling...</div>
+                <div class="arrow-wrapper">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div id="info-shared" class="info">
+                <div class="arrow-wrapper">
+                    <div class="arrow"></div>
+                </div>
+                <div id="compiling-shared" class="compiling">Compiling...</div>
+                <div class="arrow-wrapper">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div class="output-wrapper">
+                <div id="output-private" class="output" ></div>
+            </div>
+            <div class="output-wrapper">
+                <div id="output-shared" class="output"></div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/mode/javascript/javascript.min.js"></script>
+        <script type="text/javascript" src="js/chat.js"></script>
+    </body>
+</html>
+

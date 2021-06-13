@@ -1,0 +1,14 @@
+#editor {
+    width: 50%; */
+    /* height: 10% */
+}
+
+#language {
+}
+
+#run {
+}
+
+#output {
+    white-space: pre-line;
+}
