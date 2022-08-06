@@ -1,7 +1,7 @@
 const exec = require("child_process").exec;
 
 let ID = "";
-const image = "compiler2";
+const image = "compiler";
 const file = "code/main.py";
 (async () => {
     await new Promise((resolve, reject) => {
